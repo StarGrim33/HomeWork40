@@ -21,6 +21,8 @@ namespace JuniorHomeWork
             int magmaStackMagmaBlast = 5;
 
             int bossHp = 2000;
+            int minAttack = 100;
+            int criticalAttack = 200;
 
             int userInput;
 
@@ -37,7 +39,7 @@ namespace JuniorHomeWork
             while (mageHp > 0 && bossHp > 0)
             {
                 Random random = new Random();
-                int bossDamage = random.Next(100, 200);
+                int bossDamage = random.Next(minAttack, criticalAttack);
                 Console.WriteLine("Выберите заклинание для аттаки:");
                 Console.WriteLine("1 - Fire Ball: " + fireBall + " damage");
                 Console.WriteLine("2 - Magma Attack: " + magmaAttack + " damage. Для этого заклинания требуется " + magmaStackMagmaAttack + " очков магмы");
